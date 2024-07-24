@@ -1,0 +1,19 @@
+{% extends "nav.html" %}
+
+{% block title %}
+View All Users
+{% endblock %}
+
+
+{% block content%}
+    <table style="width:30%">
+        <thead>
+            <tr><th>Naam</th><th>Email</th></tr>
+        </thead>
+        <tbody>
+            {% for item in values %}
+            <tr><td>{{item.name}}</td><td>{{item.email}}</td></tr>
+            {% endfor %}
+        </tbody>      
+    </table>
+{% endblock %}
